@@ -7,7 +7,7 @@
 .calculadoraBase {
     margin: 3rem auto;
     background-color: rgb(109, 108, 108);
-    width: 37rem;
+    width: 30rem;
 }
 
 .calculadora {
@@ -29,7 +29,6 @@
 .btnNum,
 .btnIgual,
 .btnDelete {
-    width: 1rem;
     text-align: center;
     padding: 2rem;
     border: solid black 0.1rem;
@@ -45,4 +44,10 @@
 .btnDelete:hover {
     transition: all 300ms ease-in-out;
     opacity: 0.3;
+}
+
+@media (max-width: 414px) {
+    .calculadoraBase{
+        width: 22rem;
+    }
 }
