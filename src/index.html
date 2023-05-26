@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,45 +8,54 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Calculadora</title>
 </head>
+
 <body>
 
     <section class="calculadoraBase">
         <table class="calculadora">
             <tr>
-                <td class="resultado" colspan="4"></td>
+                <td colspan=4 class="resultado" id="resultado"></td>
+            </tr>
+
+            <tr>
+                <td class="btnDelete" id="clear">C</td>
+                <td class="btnNum">%</td>
+                <td class="btnNum">(</td>
+                <td class="btnNum">)</td>
             </tr>
 
             <tr>
                 <td class="btnNum">7</td>
                 <td class="btnNum">8</td>
                 <td class="btnNum">9</td>
-                <td class="btnNum btnDivisao">/</td>
+                <td class="btnNum">/</td>
             </tr>
 
             <tr>
                 <td class="btnNum">4</td>
                 <td class="btnNum">5</td>
                 <td class="btnNum">6</td>
-                <td class="btnNum btnMultiplicacao">x</td>
+                <td class="btnNum">*</td>
             </tr>
 
             <tr>
                 <td class="btnNum">1</td>
                 <td class="btnNum">2</td>
                 <td class="btnNum">3</td>
-                <td class="btnNum btnMenos">-</td>
+                <td class="btnNum">-</td>
             </tr>
 
             <tr>
                 <td class="btnNum">0</td>
-                <td class="btnNum btnPonto">.</td>
-                <td class="btnIgual">=</td>
-                <td class="btnNum btnMais">+</td>
+                <td class="btnNum">.</td>
+                <td class="btnIgual" id="btnIgual">=</td>
+                <td class="btnNum">+</td>
             </tr>
         </table>
     </section>
-    
+
     <script src="./javaScript/main.js"></script>
 
 </body>
+
 </html>

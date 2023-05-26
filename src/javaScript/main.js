@@ -1,24 +1,31 @@
-const displayResultado = document.querySelector('.resultado');
+const numerosEoperacoes = document.querySelectorAll('.btnNum');
+const igual = document.getElementById('btnIgual')
+const displayResultado = document.getElementById('resultado');
 
-function getInput() {
-    document.addEventListener('click', (e) => {
-        const el = e.target;
+document.addEventListener('click', (e) => {
+    const el = e.target;
 
-        if(el.classList.contains('btnNum')){
-            (function addHtml(btn){
-                displayResultado.innerHTML += btn;
+    if (el.classList.contains('btnDelete')) {
+        displayResultado.innerHTML = '';
+    }
 
-            })(el.innerText);
-        }
-    })
-};
+    if (el.classList.contains('btnNum')) {
+        displayResultado.innerHTML += el.innerText;
+    }
 
-getInput()
+    if (el.classList.contains('btnIgual')) {
+        verificaCode(displayResultado.innerText)
+        return;
+    }
+});
 
-function calulator(){
+function verificaCode(value) {
     try {
-        displayResultado.value
-    } catch (error) {
-        
+        if(eval(value)) {
+            displayResultado.innerHTML = eval(value);
+        }
+
+    } catch (err) {
+        displayResultado.innerHTML = '';
     }
 }
